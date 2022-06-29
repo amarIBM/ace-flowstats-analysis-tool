@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+ <script
+         src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script>
+</head>
+<html>
+<link rel=stylesheet type=text/css
+      href="{{ url_for('static', filename='style.css') }}"/>
+<body style="font-family:arial, sans-serif">
+
+    <h1>{{header}}</h1>
+    <h4><a href="/">Return to index page</a></h4>
+    <div id="chart" class="chart"></div>
+    <div style="display:flex;justify-content:space-around">
+    <script type="text/javascript" width="450"
+            height="450" style="margin-left: 15px" >
+     var graphs = {{graphJSON | safe}};
+</script>
+    </div>
+</body>
+</html>

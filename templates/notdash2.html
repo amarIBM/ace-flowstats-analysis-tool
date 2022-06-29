@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        xmlns:position="http://www.w3.org/1999/xhtml"
+        xmlns:position="http://www.w3.org/1999/xhtml"></script>
+<script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script>
+
+<html>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<body style="font-family:arial, sans-serif">
+    <h1>{{header}}</h1>
+    <a href="./">Home</a>
+    <div id="chart" class="chart"></div>
+    <div style="display:flex;justify-content:space-around">
+           <img src="static/messageflow_elapse.png"  width="450"
+            height="450" style="margin-left: 15px" >
+                 <img src="static/messageflow_cpu1.png"  width="450"
+            height="450" style="margin-left: 15px"  >
+    </div>
+            <title> Message Flows wrt to Avg. Elapsed Time </title>
+            <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <style>
+
+.elapse tbody th {
+    background-color: unset;
+    color: unset;
+}
+
+.cpumess tbody th {
+    background-color: unset;
+    color: unset;
+}
+    </style>
+            <div class=table>
+              <h1> Message Flows</h1>
+                 <div style="display:flex;justify-content:space-around">
+              {% for table in tables %}
+                     <div>
+                <h2>{{titles[loop.index]}}</h2>
+                {{ table|safe }}
+                 </div>
+              {% endfor %}
+                 </div>
+            </div>
+
+  </body>
+</html>
