@@ -33,6 +33,16 @@ A tool that analyses and produces reports for ACE message flow acc &amp; Stats d
 
 
 - The output will be generated in the directory mentioned on the command line. It produces Bar charts for the message flows of against Top Elapsed Time and CPU Times 
+- The last line on output on console would look like this:
+```
+Total number of unique message flows:  6
+ * Serving Flask app 'app' (lazy loading)
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * 
+ ```
+ 
+Open this URL http://127.0.0.1:5000/ on your local browser to access the various charts produced by the tool.  The examples charts are shown below :
 
 ![image](https://user-images.githubusercontent.com/11312111/176396073-6fa2c5d5-5403-4d57-8f7d-3e55e66b28f6.png)     ![image](https://user-images.githubusercontent.com/11312111/176396659-3ab8ba73-046d-445d-a200-b3c87de7b5dd.png)
 
